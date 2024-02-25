@@ -1,5 +1,11 @@
 #headearList {}
 
+#todoList {
+  height: 100vh;
+  background: rgb(0, 121, 255);
+  background: linear-gradient(180deg, rgba(0, 121, 255, 1) 0%, rgba(11, 120, 222, 1) 50%, rgba(0, 177, 205, 1) 100%);
+}
+
 #nextTask {
   width: 100%;
   margin-top: 20px;
