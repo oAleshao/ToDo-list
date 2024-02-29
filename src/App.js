@@ -6,8 +6,9 @@ import ShopForMan from './components/shop/shop-for-man'
 function App() {
   return (
     <div>
-      {/* <TodoList /> */}
-      <ShopForMan />
+      {/* <Example /> */}
+      <TodoList />
+      {/* <ShopForMan /> */}
     </div>
   );
 }

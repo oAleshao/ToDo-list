@@ -1,11 +1,11 @@
+import classNames from 'classnames';
 import React from 'react';
 
-const TodoFilter = () => {
+const TodoFilter = ({ setFilter, filters, activeBtn }) => {
+    const filterKeys = Object.keys(filters);
     return (
         <div id='HeaderList'>
-            <button>TODO</button>
-            <button>DONE</button>
-            <button>ALL</button>
+            {filterKeys.map(filter => <button key={filter} className={classNames({ active: filter === activeBtn })} onClick={() => setFilter(filter)}>{filter}</button>)}
         </div>
     );
 }

@@ -6,7 +6,31 @@
 #logo {
     display: flex;
     padding: 20px 0px 0px 30px;
+    position: relative;
 }
+
+#addProduct {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+#addProduct button {
+    color: white;
+    background: black;
+    border: none;
+    padding-block: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+#addProduct button:hover {
+    background: transparent;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
 
 #logo img {
     height: 80px;
@@ -63,4 +87,72 @@
 
 #item:hover {
     filter: grayscale(0.4);
+}
+
+#detailsProduct {
+    height: 350px;
+    width: 800px;
+    display: flex;
+    background: #dc132794;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 140px;
+}
+
+#detailsProduct h1,
+h2,
+h3,
+h4 {
+    color: white;
+    margin: 0px;
+    padding-inline: 20px;
+}
+
+#detailsProduct h1 {
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+#detailsProduct h2 {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+#detailsProduct h3 {
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+#detailsProduct h4 {
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+
+
+.dImgProd img {
+    height: 350px;
+}
+
+#rateBlock {
+    height: 20px;
+    padding: 5px;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #1a1a1a94;
+    border-radius: 5px;
+}
+
+#rateBlock p {
+    color: white;
+    font-size: 16px;
+    padding: 0px 0px 0px 5px;
+    margin-block: auto;
+}
+
+#rateBlock img {
+    height: 20px;
 }
