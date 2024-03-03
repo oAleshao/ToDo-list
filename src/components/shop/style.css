@@ -156,3 +156,64 @@ h4 {
 #rateBlock img {
     height: 20px;
 }
+
+#addProductBody {
+    width: 280px;
+    height: 380px;
+    background: #dc132794;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1.5px solid rgb(23, 21, 21);
+    position: absolute;
+    top: 130px;
+    right: 80px;
+}
+
+#addProductBody h1 {
+    color: white;
+    margin: 0px;
+    padding-block: 10px;
+    text-align: center;
+}
+
+.productField {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.productField span {
+    width: 300px;
+    color: white;
+    padding: 5px 0px 2px 30px;
+}
+
+.productField input {
+    height: 20px;
+    width: 200px;
+    margin-left: 25px;
+    border-radius: 8px;
+    padding-inline: 10px;
+    border: none;
+    outline: none;
+}
+
+#btnAdd {
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+#btnAdd button {
+    background: black;
+    border: 1.5px solid black;
+    color: white;
+    border-radius: 8px;
+    padding: 4px 20px 4px 20px;
+    transition: 0.2s;
+}
+
+#btnAdd button:hover {
+    background: transparent;
+    transition: 0.2s;
+}

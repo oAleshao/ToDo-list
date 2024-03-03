@@ -12,13 +12,15 @@ const TodoItem = ({ id, title, done, removeTask, toggleDone, addTask }) => {
     let [nowValue, setNowValue] = useState(title)
     let [curImg, setCurImg] = useState(done ? twoTick : tick);
 
+    console.log("-----------" + nowValue);
 
     let changedImg = () => {
-        isEdit ? setIsEdit(false) : setIsEdit(true);
-        if (isEdit)
+        if (!isEdit)
             setCurImg(editImg);
         else
             setCurImg(done ? twoTick : tick);
+
+        isEdit ? setIsEdit(false) : setIsEdit(true);
     }
 
 
@@ -40,10 +42,10 @@ const TodoItem = ({ id, title, done, removeTask, toggleDone, addTask }) => {
                     }} src={curImg}></img>
                 </div>
             </div>
-            <input placeholder='your note' className={classNames({ "task-done": done })} onKeyDown={(e) => {
-                e.target.value = nowValue;
-                setNowValue(nowValue);
-            }}></input>
+            <input placeholder='your note' className={classNames({ "task-done": done })}
+                onChange={(e) => { setNowValue(e.target.value) }} value={nowValue}
+                onFocus={() => { changedImg(); }}
+                onBlur={() => { changedImg(); }}></input>
             <div className='btnDel'>
                 <img onClick={() => removeTask(id)} src={del} alt=''></img>
             </div>

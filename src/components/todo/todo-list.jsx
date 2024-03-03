@@ -6,6 +6,8 @@ import TodoItem from './todo-item';
 import list from './todoData';
 import { nanoid } from 'nanoid';
 import { TodoReducer } from './todo-reducer'
+import { ThemeContext } from '../../contexts/themeContext';
+import { useContext } from 'react';
 
 
 const TodoList = () => {
@@ -15,8 +17,7 @@ const TodoList = () => {
 
     useEffect(() => {
         dispatch({
-            type: "create",
-            payload: 'New title'
+            type: "create"
         });
 
     }, []);
@@ -57,7 +58,7 @@ const TodoList = () => {
 
 
     return (
-        <div id='todoList'>
+        <div id='todoList' >
             <h3>TODO LIST</h3>
             <TodoAdd addTask={addTask} />
             <div id="List">

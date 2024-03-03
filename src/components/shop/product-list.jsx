@@ -3,6 +3,7 @@ import React from 'react';
 
 const ProductList = ({ id, title, description, price, category, image, rating, ChooseProduct, product }) => {
 
+    console.log(id + ")" + title);
     if (title.length > 20)
         title = title.substring(0, 20) + "...";
 

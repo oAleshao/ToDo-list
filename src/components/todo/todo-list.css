@@ -4,6 +4,11 @@
   background: linear-gradient(180deg, rgba(0, 121, 255, 1) 0%, rgba(11, 120, 222, 1) 50%, rgba(0, 177, 205, 1) 100%);
 }
 
+.theme-todolist-dark {
+  background: rgb(107, 29, 180);
+  background: linear-gradient(180deg, rgba(107, 29, 180, 1) 0%, rgba(41, 17, 149, 1) 48%, rgba(31, 21, 21, 1) 100%);
+}
+
 #nextTask {
   width: 100%;
   margin-top: 20px;

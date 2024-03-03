@@ -1,0 +1,23 @@
+header {
+    background: rgb(188, 188, 188);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme-dark {
+    background: rgb(31, 31, 31);
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}

@@ -3,8 +3,10 @@ import { nanoid } from "nanoid";
 export const TodoReducer = (state, action) => {
     switch (action.type) {
         case 'create':
-            console.log(action.payload);
-            return [...state, { id: nanoid(), title: action.payload, done: false }];
+            if (action.payload !== undefined)
+                return [...state, { id: nanoid(), title: action.payload, done: false }];
+            else
+                return [...state];
         case 'remove':
             // action.payload = id;
             return state.filter(item => item.id !== action.payload);
@@ -15,7 +17,11 @@ export const TodoReducer = (state, action) => {
             return [];
         case 'changedDone':
             // action.payload = {id};
-            return [];
+            return state.map((task) => {
+                if (task.id === action.payload)
+                    return { ...task, done: !task.done };
+                return task;
+            })
         default:
             return state;
     }

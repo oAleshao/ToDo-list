@@ -1,15 +1,22 @@
 import './App.css';
 import Example from './components/example/example';
 import TodoList from './components/todo/todo-list';
-import ShopForMan from './components/shop/shop-for-man'
+import ShopForMan from './components/shop/shop-for-man';
+import Header from './components/Header';
+import ThemeProvider from './components/providers/themeProvider';
+import { Outlet } from 'react-router-dom';
 
 function App() {
+
+
   return (
-    <div>
+    <ThemeProvider>
+      <Header />
+      <Outlet />
       {/* <Example /> */}
-      <TodoList />
+      {/* <TodoList /> */}
       {/* <ShopForMan /> */}
-    </div>
+    </ThemeProvider>
   );
 }
 
