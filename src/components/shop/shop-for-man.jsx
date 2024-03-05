@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import ShopLogo from './shop-logo';
 import ProductList from './product-list';
 import products from './products'
@@ -10,9 +10,11 @@ import { nanoid } from 'nanoid';
 const ShopForMan = () => {
 
     const [list, setlist] = useState(products);
+    const [favlist, setFavlist] = useState([]);
     const [vanish, setVanish] = useState(false);
     const [product, setProduct] = useState('');
     const [formVis, setformVis] = useState(false);
+    const [vanishFav, setVanishfav] = useState(false);
 
     const openForm = () => {
         setformVis(!formVis);
@@ -36,14 +38,44 @@ const ShopForMan = () => {
         }])
     };
 
+    const changeFavlist = (id, isFavorite) => {
+
+        let tmpList = [];
+        console.log(isFavorite)
+        if (isFavorite === true) {
+            tmpList = list.filter(p => p.id === id);
+            setFavlist([...favlist, ...tmpList])
+        }
+        else {
+            tmpList = favlist.filter(p => p.id !== id);
+            setFavlist([...tmpList]);
+        }
+
+        console.log(tmpList);
+
+    };
+
+    const openFavList = () => {
+        setVanishfav(!vanishFav);
+    };
+
+
     return (
         <div id='MensShop'>
-            <ShopLogo openForm={openForm} />
+            <ShopLogo openForm={openForm} favlist={favlist} openFavList={openFavList} />
 
             <div id="offersBody">
-                <h1 id='offers'>Special offers</h1>
+                <h1 id='offers'>
+                    {vanishFav ?
+                        'Favorites' :
+                        'Special offers'
+                    }
+                </h1>
                 <div id='shopBodyList'>
-                    {list.map((product) => (<ProductList {...product} product={product} ChooseProduct={ChooseProduct} key={product.id} />))}
+                    {vanishFav ?
+                        favlist.map((product) => (<ProductList {...product} product={product} ChooseProduct={ChooseProduct} changeFavlist={changeFavlist} key={product.id} />)) :
+                        list.map((product) => (<ProductList {...product} product={product} ChooseProduct={ChooseProduct} changeFavlist={changeFavlist} key={product.id} />))
+                    }
                 </div>
             </div>
             {formVis && (

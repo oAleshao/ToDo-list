@@ -1,6 +1,6 @@
 #MensShop {
     height: 100vh;
-    background-color: rgb(170, 110, 110);
+    background-color: rgb(180, 168, 168);
 }
 
 #logo {
@@ -13,6 +13,27 @@
     position: absolute;
     right: 30px;
     top: 30px;
+}
+
+#favBtn {
+    position: absolute;
+    height: 40px;
+    margin-block: auto;
+    margin-left: 80px;
+    top: 28px;
+    right: 150px;
+}
+
+#favBtn p {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color: white;
+}
+
+#FavoriteIconHeader {
+    color: rgb(255, 0, 0);
+    font-size: 35px;
 }
 
 #addProduct button {
@@ -65,6 +86,21 @@
     background: #dc132794;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
+}
+
+#FavoriteBorderIcon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: rgb(97, 97, 97);
+}
+
+#FavoriteIcon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: rgb(218, 0, 0);
 }
 
 #item img {
@@ -86,7 +122,7 @@
 }
 
 #item:hover {
-    filter: grayscale(0.4);
+    filter: grayscale(0.1);
 }
 
 #detailsProduct {
