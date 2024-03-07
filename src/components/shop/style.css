@@ -253,3 +253,47 @@ h4 {
     background: transparent;
     transition: 0.2s;
 }
+
+#sortBox {
+    display: flex;
+    align-items: center;
+}
+
+#sortBox p {
+    color: white;
+    padding-inline: 20px;
+    font-size: 20px;
+}
+
+
+
+#sortBox div {
+    height: 25px;
+    width: 70px;
+    display: flex;
+    text-align: center;
+    margin-inline: 5px;
+}
+
+.styleSort:hover {
+    border-bottom: 1px solid white;
+}
+
+.styleSort h1 {
+    margin: 0;
+    padding: 2px 0px 0px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.styleSort h2 {
+    margin: 0;
+    padding: 2px 0px 0px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.iconSort {
+    color: white;
+    margin: 2px 0px 0px 2px;
+}
