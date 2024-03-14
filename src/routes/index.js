@@ -4,6 +4,7 @@ import App from "../App";
 import ShopForMan from "../components/shop/shop-for-man";
 import Users from "../components/users/users";
 import User from "../components/users/user";
+import CurrencyHome from "../components/currencies/currency-home";
 
 
 export const router = createBrowserRouter([
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
                     }
                 ]
             },
+            {
+                path: '/currency',
+                element: <CurrencyHome />
+            }
 
         ]
     },

@@ -13,6 +13,7 @@ const Header = () => {
                 <NavLink to='/todo'>ToDo</NavLink>
                 <NavLink to='/shopForMen'>Shop</NavLink>
                 <NavLink to='/users'>Users</NavLink>
+                <NavLink to='/currency'>Currency</NavLink>
             </nav>
             <div onClick={() => { toggleTheme() }}>
                 {theme === "light" ? <ModeNightIcon></ModeNightIcon> :
